@@ -1,0 +1,282 @@
+[
+  {
+    "question": "水煎包の発祥地は？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "タピオカミルクティの発祥地は？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "金城武の出身地は？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "九份があるのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "四川料理の発祥地は？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "北京ダックの発祥地は？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "万里の長城があるのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "兵馬俑があるのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "上海があるのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "この地図が表しているのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "カンムリチメドリが生息しているのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "原神はどこの国のゲーム会社が作った？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "アニメ「兄につける薬はない！」の原作元は？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "峮峮(チュンチュン)の出身地は？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "ホラーゲーム「返校」を開発したのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "決済サービスブランド「銀聯（ぎんれん）」を設立したのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "電子決済サービス「アリペイ」を提供しているのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "bilibili動画はどこのサービス？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "Ankerはどこの会社？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "音楽ゲーム「DEEMO」を開発したのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "「パンティーパーティー」を開発したのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "ホラー映画「呪詛」が製作されたのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "パワースポットとして知られる龍山寺(ロンシャンスー)があるのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "繁体字を日常的に使っているのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "法律により、一部の交通機関でガムを噛むと罰金になるのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "アズールレーンを開発したのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "「鳥の将に死なんとするや、その鳴くや哀し。人の将に死なんとするや、その慶うや善し」はどこのことわざ？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "SHEINはどこのアパレルブランド？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "映画「ラストエンペラー」の舞台は？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "楊貴妃がいたのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "検索エンジン「Baidu（百度）」の利用率が高いのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "性悪説を唱えた荀子はどの国の人物？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "月餅の発祥地は？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "不思議なことに「くまのプーさん」がタブーにされたのは？",
+    "answer": {
+      "id": 2,
+      "answer": "中国"
+    }
+  },
+  {
+    "question": "担仔麺の発祥は？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "コミックイベント「CWT」が開催されてるのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "検索エンジン「Yahoo!奇摩」の利用率が高いのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "亡くなった女性の家族が、赤い封筒に女性の写真や髪の毛を入れて、拾った男性と結婚させる「冥婚」と呼ばれる風習があるのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "台北があるのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  },
+  {
+    "question": "故宮博物院があるのは？",
+    "answer": {
+      "id": 1,
+      "answer": "台湾"
+    }
+  }
+]

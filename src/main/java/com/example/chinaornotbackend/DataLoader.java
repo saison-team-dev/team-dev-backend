@@ -30,7 +30,6 @@ public class DataLoader implements ApplicationRunner {
     answers.stream()
         .filter(answer -> answerRepository.findByAnswer(answer.getAnswer()).isEmpty())
         .forEach(answer -> answerRepository.save(answer));
-    answerRepository.saveAll(answers);
 
     List<Quiz> quizzes = JsonFileReader.readJsonFile("src/main/resources/data/quizzes.json",
         new TypeReference<List<Quiz>>() {

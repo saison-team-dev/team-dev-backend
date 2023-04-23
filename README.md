@@ -26,7 +26,7 @@ $ cd team-dev-backend
 $ docker-compose up --build
 ```
 
-1. ブラウザで [http://localhost:8080](http://localhost:8000/) にアクセスし、アプリケーションが正常に動作していることを確認。
+1. ブラウザで [http://localhost:8000](http://localhost:8000/) にアクセスし、アプリケーションが正常に動作していることを確認。
 
 ## アプリケーションの停止
 

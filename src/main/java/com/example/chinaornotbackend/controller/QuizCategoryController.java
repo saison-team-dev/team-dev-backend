@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @RequestMapping("/api/quiz_categories")
 public class QuizCategoryController {
   
-  @GetMapping("/")
+  @GetMapping
   private String getQuizCategory() throws JsonProcessingException, IOException {
     ObjectMapper objectMapper = new ObjectMapper();
     JsonNode json = objectMapper.readTree(Paths.get("src/main/resources/data/quizCategories.json").toFile());

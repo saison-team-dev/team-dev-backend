@@ -9,21 +9,33 @@ import org.springframework.stereotype.Component;
 
 import com.example.chinaornotbackend.model.Answer;
 import com.example.chinaornotbackend.model.Quiz;
+import com.example.chinaornotbackend.model.User;
 import com.example.chinaornotbackend.repository.AnswerRepository;
 import com.example.chinaornotbackend.repository.QuizRepository;
+import com.example.chinaornotbackend.repository.UserRepository;
 import com.example.chinaornotbackend.util.JsonFileReader;
 import com.fasterxml.jackson.core.type.TypeReference;
 
 @Component
 public class DataLoader implements ApplicationRunner {
   @Autowired
-  private QuizRepository quizRepository;
+  private UserRepository userRepository;
 
   @Autowired
   private AnswerRepository answerRepository;
 
+  @Autowired
+  private QuizRepository quizRepository;
+
   @Override
   public void run(ApplicationArguments args) {
+    List<User> users = JsonFileReader.readJsonFile("src/main/resources/data/users.json",
+        new TypeReference<List<User>>() {
+        });
+    users.stream()
+        .filter(user -> userRepository.findByName(user.getName()) == null)
+        .forEach(user -> userRepository.save(user));
+
     List<Answer> answers = JsonFileReader.readJsonFile("src/main/resources/data/answers.json",
         new TypeReference<List<Answer>>() {
         });

@@ -1,5 +1,7 @@
 package com.example.chinaornotbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -25,4 +27,8 @@ public class Quiz {
 
   @Column(name = "question", nullable = false)
   private String question;
+
+  @JsonProperty("image_url")
+  @Column(name = "image_url", nullable = false)
+  private String imageUrl;
 }

@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.example.chinaornotbackend.exception.QuizNotFoundExeption;
@@ -20,23 +18,7 @@ public class QuizServiceImpl implements QuizService {
 
   @Override
   public List<QuizResponse> getQuizzes() {
-    Pageable pageable = PageRequest.of(0, 10);
-    List<Quiz> quizzes = quizRepository.findAllWithAnswers(pageable);
-    /*
-     * 以下の形式でクイズを取得する
-     * [
-     * {
-     * "id": 1,
-     * "question": "クイズの問題文",
-     * "answer": "クイズの回答"
-     * },
-     * {
-     * "id": 2,
-     * "question": "クイズの問題文",
-     * "answer": "クイズの回答"
-     * }
-     * ]
-     */
+    List<Quiz> quizzes = quizRepository.findAllWithAnswers();
 
      List<QuizResponse> quizResponses = new ArrayList<>();
     for (Quiz quiz : quizzes) {

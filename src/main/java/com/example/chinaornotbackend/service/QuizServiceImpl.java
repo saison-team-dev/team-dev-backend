@@ -40,7 +40,7 @@ public class QuizServiceImpl implements QuizService {
 
      List<QuizResponse> quizResponses = new ArrayList<>();
     for (Quiz quiz : quizzes) {
-      QuizResponse quizResponse = new QuizResponse(quiz.getId(), quiz.getQuestion(), quiz.getAnswer().getAnswer());
+      QuizResponse quizResponse = new QuizResponse(quiz.getId(), quiz.getQuestion(), quiz.getAnswer().getAnswer(), quiz.getImageUrl());
       quizResponses.add(quizResponse);
     }
 

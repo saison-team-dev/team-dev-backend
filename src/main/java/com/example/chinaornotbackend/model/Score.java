@@ -1,7 +1,5 @@
 package com.example.chinaornotbackend.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -15,20 +13,19 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "quizzes")
-public class Quiz {
+@Table(name = "scores")
+public class Score {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "answer_id")
-  private Answer answer;
+  @JoinColumn(name = "user_id", nullable = false)
+  private User user;
 
-  @Column(name = "question", nullable = false)
-  private String question;
+  @Column(name = "total_score", nullable = false)
+  private int totalScore;
 
-  @JsonProperty("image_url")
-  @Column(name = "image_url", nullable = false)
-  private String imageUrl;
+  @Column(name = "correct_rate", nullable = false)
+  private int correctRate;
 }

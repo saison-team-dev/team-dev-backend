@@ -20,19 +20,13 @@ $ git clone https://github.com/saison-team-dev/team-dev-backend.git
 $ cd team-dev-backend
 ```
 
-2. Spring Boot アプリケーションの JAR ファイルをビルド。
-
-```bash
-$ ./mvnw clean package
-```
-
-3. Docker Compose を使用して API サーバとデータベースのコンテナを起動。
+1. Docker Compose を使用して API サーバとデータベースのコンテナを起動。
 
 ```bash
 $ docker-compose up --build
 ```
 
-4. ブラウザで [http://localhost:8080](http://localhost:8080/) にアクセスし、アプリケーションが正常に動作していることを確認。
+1. ブラウザで [http://localhost:8000](http://localhost:8000/) にアクセスし、アプリケーションが正常に動作していることを確認。
 
 ## アプリケーションの停止
 

@@ -35,7 +35,7 @@ public class QuizControllerTest {
   public void getQuizzes_shouldReturnQuizzes() throws Exception {
     List<QuizResponse> quizzes = new ArrayList<>();
     for(int i = 0; i < 10; i++) {
-      QuizResponse quiz = new QuizResponse((long) i, "quiz" + i, "answer" + i);
+      QuizResponse quiz = new QuizResponse((long) i, "quiz" + i, "answer" + i, "imageUrl" + i);
       quizzes.add(quiz);
     }
     when(quizService.getQuizzes()).thenReturn(quizzes);
@@ -46,6 +46,7 @@ public class QuizControllerTest {
       .andExpect(jsonPath("$[0].id").value(0L))
       .andExpect(jsonPath("$[0].question").value("quiz0"))
       .andExpect(jsonPath("$[0].answer").value("answer0"))
+      .andExpect(jsonPath("$[0].imageUrl").value("imageUrl0"))
       .andExpect(jsonPath("$", hasSize(10)));
   }
 }

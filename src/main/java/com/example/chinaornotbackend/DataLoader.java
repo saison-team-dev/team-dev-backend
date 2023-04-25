@@ -69,7 +69,7 @@ public class DataLoader implements ApplicationRunner {
         new TypeReference<List<QuizCategory>>() {
         });
     quizCategories.stream()
-        .filter(quizCategory -> quizCategoryRepository.findByName(quizCategory.getName()) == null)
+        .filter(quizCategory -> quizCategoryRepository.findByName(quizCategory.getName()).isEmpty())
         .forEach(quizCategory -> quizCategoryRepository.save(quizCategory));
   }
 }

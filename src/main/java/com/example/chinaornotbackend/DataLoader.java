@@ -71,6 +71,5 @@ public class DataLoader implements ApplicationRunner {
     quizCategories.stream()
         .filter(quizCategory -> quizCategoryRepository.findByName(quizCategory.getName()) == null)
         .forEach(quizCategory -> quizCategoryRepository.save(quizCategory));
-
   }
 }

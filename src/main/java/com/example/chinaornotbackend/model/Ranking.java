@@ -13,31 +13,41 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "scores")
-public class Score {
+@Table(name="scores")
+public class Ranking {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "user_id")
+  private User userId;
 
   @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "user_id", nullable = false)
-  private User user;
-
+  @JoinColumn(name = "name")
+  private User name;
+  
   @Column(name = "total_score", nullable = false)
   private int totalScore;
-
+  
   @Column(name = "correct_rate", nullable = false)
   private int correctRate;
   
-  public Long getId() {
-	  return this.id;
+  @Column(name = "rank", nullable = false)
+  private int rank;
+  
+  public User getUserId() {
+	  return userId;
   }
   
-  public int getCorrectRate() {
-	  return this.correctRate;
+  public User getName() {
+	  return name;
   }
   
   public int getTotalScore() {
-	  return this.totalScore;
+	  return totalScore;
   }
+  
+  public int getCorrectRate() {
+	  return correctRate;
+  }
+  
 }

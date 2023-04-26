@@ -16,6 +16,6 @@ public interface RankingRepository extends JpaRepository<Score, Long> {
 //  Optional<Ranking> findByQuestion(String question);
 
   // ランダムに10個のクイズを取得
-  @Query(value = "SELECT * FROM scores ORDER BY total_score LIMIT 10;", nativeQuery = true)
+  @Query(value = "SELECT * FROM scores ORDER BY total_score DESC LIMIT 10;", nativeQuery = true)
   List<RankingResponse> getTop10Scores();
 }

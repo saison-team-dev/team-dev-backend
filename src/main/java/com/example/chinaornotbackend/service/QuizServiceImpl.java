@@ -13,7 +13,7 @@ import com.example.chinaornotbackend.response.QuizResponse;
 
 @Service
 public class QuizServiceImpl implements QuizService {
-  @Autowired
+    @Autowired
   private QuizRepository quizRepository;
 
   @Override

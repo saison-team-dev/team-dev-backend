@@ -28,16 +28,4 @@ public class Score {
 
   @Column(name = "correct_rate", nullable = false)
   private int correctRate;
-  
-  public Long getId() {
-	  return this.id;
-  }
-  
-  public int getCorrectRate() {
-	  return this.correctRate;
-  }
-  
-  public int getTotalScore() {
-	  return this.totalScore;
-  }
 }

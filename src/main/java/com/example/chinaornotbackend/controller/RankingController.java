@@ -15,9 +15,8 @@ import com.example.chinaornotbackend.service.RankingService;
 @RestController
 @RequestMapping("/api/ranking")
 public class RankingController {
-  @Autowired
-  private RankingService rankingService;
-
+	@Autowired
+	RankingService rankingService;
   @GetMapping
   public ResponseEntity<List<RankingResponse>> getRankings() {
     List<RankingResponse> rankings = rankingService.getRankings();

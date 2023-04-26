@@ -9,9 +9,11 @@ import org.springframework.stereotype.Component;
 
 import com.example.chinaornotbackend.model.Answer;
 import com.example.chinaornotbackend.model.Quiz;
+import com.example.chinaornotbackend.model.Score;
 import com.example.chinaornotbackend.model.User;
 import com.example.chinaornotbackend.repository.AnswerRepository;
 import com.example.chinaornotbackend.repository.QuizRepository;
+import com.example.chinaornotbackend.repository.ScoreRepository;
 import com.example.chinaornotbackend.repository.UserRepository;
 import com.example.chinaornotbackend.util.JsonFileReader;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -26,6 +28,9 @@ public class DataLoader implements ApplicationRunner {
 
   @Autowired
   private QuizRepository quizRepository;
+
+  @Autowired
+  private ScoreRepository scoreRepository;
 
   @Override
   public void run(ApplicationArguments args) {
@@ -60,5 +65,12 @@ public class DataLoader implements ApplicationRunner {
         quiz.setAnswer(relatedAnswer);
       }
     }
+
+    List<Score> scores = JsonFileReader.readJsonFile("src/main/resources/data/scores.json",
+        new TypeReference<List<Score>>() {
+        });
+    scores.stream()
+        .forEach(score -> scoreRepository.save(score));
+
   }
 }

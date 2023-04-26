@@ -13,7 +13,6 @@ import lombok.Data;
 @Data
 public class ScoreDto {
   private int totalScore;
-  private int correctRate;
 
   public static List<ScoreDto> convertToDto(List<Score> scores) {
     if (scores == null || scores.isEmpty()) {
@@ -24,7 +23,6 @@ public class ScoreDto {
     for (Score score : scores) {
       ScoreDto scoreDto = new ScoreDto();
       scoreDto.setTotalScore(score.getTotalScore());
-      scoreDto.setCorrectRate(score.getCorrectRate());
       scoreDtos.add(scoreDto);
     }
     return scoreDtos;

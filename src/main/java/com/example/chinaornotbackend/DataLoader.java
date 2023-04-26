@@ -65,7 +65,7 @@ public class DataLoader implements ApplicationRunner {
         quiz.setAnswer(relatedAnswer);
       }
     }
-    List<QuizCategory> quizCategories = JsonFileReader.readJsonFile("/Users/sosamjayo/Documents/01_Developments/saison_team_dev/team-dev-backend/src/main/resources/data/quizCategories.json",
+    List<QuizCategory> quizCategories = JsonFileReader.readJsonFile("src/main/resources/data/quizCategories.json",
         new TypeReference<List<QuizCategory>>() {
         });
     quizCategories.stream()

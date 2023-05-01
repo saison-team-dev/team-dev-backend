@@ -1,5 +1,7 @@
 package com.example.chinaornotbackend.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -24,8 +26,6 @@ public class Score {
   private User user;
 
   @Column(name = "total_score", nullable = false)
+  @JsonProperty("total_score")
   private int totalScore;
-
-  @Column(name = "correct_rate", nullable = false)
-  private int correctRate;
 }

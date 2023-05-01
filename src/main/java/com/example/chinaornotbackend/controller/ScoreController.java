@@ -22,8 +22,6 @@ import com.example.chinaornotbackend.service.UserService;
 @RestController
 @RequestMapping("/api/scores")
 public class ScoreController {
-  private static final int QuizCount = 10;
-
   @Autowired
   private ScoreService scoreService;
 
@@ -34,14 +32,12 @@ public class ScoreController {
   public ResponseEntity<Long> createScore(@RequestBody ScoreRequest scoreRequest) {
     User user = userService.getUserByid(scoreRequest.getUserId());
     int totalScore = scoreRequest.getTotalScore();
-    int correctRate = totalScore / QuizCount * 100;
     if (user == null) {
       return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
     Score score = new Score();
     score.setUser(user);
     score.setTotalScore(totalScore);
-    score.setCorrectRate(correctRate);
     Long scoreId = scoreService.createScore(score);
 
     return new ResponseEntity<>(scoreId, HttpStatus.CREATED);

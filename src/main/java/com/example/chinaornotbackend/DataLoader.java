@@ -10,8 +10,10 @@ import org.springframework.stereotype.Component;
 import com.example.chinaornotbackend.model.Answer;
 import com.example.chinaornotbackend.model.Quiz;
 import com.example.chinaornotbackend.model.Score;
+import com.example.chinaornotbackend.model.QuizCategory;
 import com.example.chinaornotbackend.model.User;
 import com.example.chinaornotbackend.repository.AnswerRepository;
+import com.example.chinaornotbackend.repository.QuizCategoryRepository;
 import com.example.chinaornotbackend.repository.QuizRepository;
 import com.example.chinaornotbackend.repository.ScoreRepository;
 import com.example.chinaornotbackend.repository.UserRepository;
@@ -31,6 +33,9 @@ public class DataLoader implements ApplicationRunner {
 
   @Autowired
   private ScoreRepository scoreRepository;
+
+  @Autowired
+  private QuizCategoryRepository quizCategoryRepository;
 
   @Override
   public void run(ApplicationArguments args) {
@@ -72,5 +77,11 @@ public class DataLoader implements ApplicationRunner {
     scores.stream()
         .forEach(score -> scoreRepository.save(score));
 
+    List<QuizCategory> quizCategories = JsonFileReader.readJsonFile("src/main/resources/data/quizCategories.json",
+        new TypeReference<List<QuizCategory>>() {
+        });
+    quizCategories.stream()
+        .filter(quizCategory -> quizCategoryRepository.findByName(quizCategory.getName()).isEmpty())
+        .forEach(quizCategory -> quizCategoryRepository.save(quizCategory));
   }
 }

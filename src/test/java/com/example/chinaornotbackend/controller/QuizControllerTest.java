@@ -38,7 +38,7 @@ public class QuizControllerTest {
       QuizResponse quiz = new QuizResponse((long) i, "quiz" + i, "answer" + i, "imageUrl" + i);
       quizzes.add(quiz);
     }
-    when(quizService.getQuizzes()).thenReturn(quizzes);
+    when(quizService.getQuizzes(10)).thenReturn(quizzes);
 
     mockMvc.perform(get("/api/quizzes")
       .contentType(MediaType.APPLICATION_JSON))
